@@ -1,0 +1,134 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.menu{
+    background-color: rgb(158, 240, 240);
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffff;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+}
+
+.logo
+{
+    color:rgb(174, 89, 207);
+    font-size: 2.7rem;
+    font-weight: bold;
+    padding: 0px 80px;
+    letter-spacing: 0.1rem;
+}
+
+.menu_items{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu_items li{
+    border-radius: 6px;
+    margin: 0px 1px;
+}
+
+.menu_items li a{
+    padding: 7px 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    color:rgb(174, 89, 207);
+}
+
+.menu_items li:hover, li.active{
+    background-color:rgb(215, 196, 223);
+    transition: .5s;
+}
+
+.btn_menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color:#fff;
+    cursor:pointer;
+    display:none;
+}
+
+ul.show{
+    top: 65px;
+}
+
+@media (max-width:1100px){
+    .logo{
+        font-size: 29px;
+        padding-left: 35px;
+    }
+    .menu_items li a{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width:850px){
+    .menu{
+        height: 65px;
+    }
+    .btn_menu{
+        display: inline-flex ;
+    }
+    .menu_items{
+        position: fixed;
+        width: 100vw;
+        height: calc(100%-65px);
+        background-color: #414141;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+
+    .menu_items li{
+        margin:30px 0 0 0;
+        line-height: 30px;
+    }
+
+    .menu_items li:hover{
+        background:none;
+    }
+
+    .menu_items li a{
+        font-size: 20px;
+        color: #ffff;
+        font-weight: bold;
+    }
+
+    .menu_items li a:hover{
+        color: slateblue;
+    }
+
+    .logo{
+        font-size: 25px;
+        padding-left: 35px;
+    }
+
+}
+
+
+@media screen and (max-width:850px) and (orientation:landscape){
+    .menu_items li{
+        margin: 5px 0 0 0;
+    }
+
+    .menu_items{
+        overflow: scroll;
+        height: calc(100%-65px);
+    }
+}
